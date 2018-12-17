@@ -3,3 +3,5 @@
 ################################################################################
 
 /TodoApi/.vs
+/TodoApi/TodoApi/bin/Debug/netcoreapp2.1
+/TodoApi/TodoApi/obj

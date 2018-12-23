@@ -24,6 +24,8 @@ namespace TodoApi.Controllers
                 _context.SaveChanges();
             }
         }
+
+
         [HttpGet]
         public ActionResult<List<TodoItem>> GetAll()
         {
@@ -58,7 +60,7 @@ namespace TodoApi.Controllers
             }
 
             todo.IsComplete = item.IsComplete;
-            todo.Name = item.Name;
+            if (item.Name != null && item.Name != "") todo.Name = item.Name;
 
             _context.TodoItems.Update(todo);
             _context.SaveChanges();
